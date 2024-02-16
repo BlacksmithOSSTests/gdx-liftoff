@@ -21,6 +21,9 @@ jobs:
           distribution: temurin
       - name: Gradle setup
         uses: useblacksmith/setup-gradle/setup-gradle@v4
+        with:
+          gradle-version: 6.5
+          cache-read-only: false
       - name: Gradle wrapper validation
         uses: gradle/wrapper-validation-action@v1
       - name: Build
